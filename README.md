@@ -1,4 +1,3 @@
-# Google_cloud_big_project
 
 # Google Cloud Data Engineer Project
 Description of the project and its purpose.
