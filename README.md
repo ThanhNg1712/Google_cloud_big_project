@@ -75,6 +75,7 @@ Script: `log_check.py`
 env EDITOR= nano crontab -e
 00 20 * * * /Users/path/to/folder/log_check.py
 
+Detailed status updates are logged in the script.log file, facilitating monitoring and troubleshooting of the data migration process.
   
 
 ## License
