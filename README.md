@@ -1,6 +1,9 @@
 
 # Google Cloud Data Engineer Project
-Description of the project and its purpose.
+
+## Project Overview
+The primary goal of this project is to build a scalable and automated data engineering pipeline that facilitates the migration, transformation, and analysis of data. By utilizing Google Cloud services, we can leverage their robust infrastructure and powerful tools to handle large datasets efficiently
+
 
 ## Step 1: Export Data From Mong DB to GoogleCloud bucket
 
