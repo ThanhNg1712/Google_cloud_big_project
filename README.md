@@ -78,19 +78,4 @@ env EDITOR= nano crontab -e
 Detailed status updates are logged in the script.log file, facilitating monitoring and troubleshooting of the data migration process.
   
 
-## License
-
-Specify the license for the project.
-
-## Contributing
-
-Guidelines for contributing to the project.
-
-## Authors
-
-List the authors or contributors of the project.
-
-## Acknowledgments
-
-Credits or acknowledgments for any resources or inspiration used in the project.
 
