@@ -1,0 +1,27 @@
+CREATE OR REPLACE TABLE `tiki-project-390622.tiki_product.seller_data` AS
+SELECT specifications,current_seller,id,
+name, price, images, warranty_info, categories, description, short_description, rating_average, all_time_quantity_sold, brand, sku, review_text,review_count FROM `tiki-project-390622.tiki_product.tiki_data`;
+
+--query 1
+SELECT categories.id,categories.name, 
+        
+        SUM(all_time_quantity_sold) AS total_quantity_sold
+FROM `tiki-project-390622.tiki_product.seller_data`
+GROUP BY categories.id,categories.name
+order by total_quantity_sold desc
+limit 10;
+
+--query 2
+SELECT current_seller.id AS seller_id, 
+      current_seller.name AS seller_name, 
+      COUNT(*) AS product_count
+FROM `tiki-project-390622.tiki_product.seller_data`
+GROUP BY seller_id, seller_name
+Order By product_count DESC limit 10;
+
+--query 3
+SELECT u.id, u.name,u.categories.name,u.current_seller.name
+FROM `tiki-project-390622.tiki_product.seller_data` u,
+UNNEST(specifications) AS spec,
+UNNEST(spec.attributes) AS attr
+WHERE attr.code = "origin" AND attr.value = "Trung Quốc";
